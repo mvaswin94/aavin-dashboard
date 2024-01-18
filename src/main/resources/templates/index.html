@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html style="overflow-x: hidden;">
+	<div th:replace="fragment/head.html::Head"></div>
+		<body>
+			<div th:replace="fragment/header.html::Header"></div>
+			<!-- Start #main -->
+			<main id="main" class="main">
+				<section class="section dashboard">
+					<div class="row">
+						<div th:replace="fragment/dashboard.html::DashboardMain"></div>
+						<div th:replace="fragment/stores-and-purchase/stores-and-purchase.html::StoresAndPurchase"></div>
+						<div th:replace="fragment/personal-and-establishment/personal-and-establishment.html::EmployeeDetails"></div>
+					</div>
+				</section>
+			</main><!-- End #main -->
+			<div th:replace="fragment/footer.html::Footer"></div>
+			<a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+				<i class="bi bi-arrow-up-short"></i>
+			</a>
+			<div th:replace="fragment/js.html::Js"></div>
+		</body>
+</html>

@@ -1,0 +1,50 @@
+<div th:fragment="PayRollDetails">
+	<section id="payRollDetails">
+		<div class="row">
+			<div class="card">
+				<div class="card-body">
+					<div class="row">
+						
+						<div class="col-lg-4">
+							<div class="card positonAlignment info-card" id="currentMonthPayRoll">
+								<div class="card-body">
+									<h5>Current Month PayRoll</h5>
+									<h6 id="currentMonthPayRollCount">0</h6>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-lg-4">
+							<div class="card positonAlignment info-card" id="lastMonthPayRoll">
+								<div class="card-body">
+									<h5>One Month Before</h5>
+									<h6 id="OneMonthBeforePayRollCount">0</h6>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-lg-4">
+							<div class="card positonAlignment info-card" id="SecondMonthPayRoll">
+								<div class="card-body">
+									<h5>Two Month's Before</h5>
+									<h6 id="twoMonthsBeforePayRollCount">0</h6>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-lg-6">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">Payroll Details</h5>
+						<!--<div id="payRollChart"></div>-->
+						<div id="payRollChart" style="min-height: 300px;" class="echart"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

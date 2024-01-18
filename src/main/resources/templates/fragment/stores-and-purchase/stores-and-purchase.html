@@ -1,0 +1,368 @@
+<div th:fragment="StoresAndPurchase">
+	<!-- Start -->
+	<div id="storesAndPurchaseCard">
+		<section class="section">
+			<div class="row">
+			
+				<div class="col-lg-12">
+					<div class="card">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-xl-1 col-md-1"></div>
+								<!-- Start CD_STORE -->
+								<div class="col-xl-2 col-md-2" id="cdStoreCard">
+									<div class="card info-card sales-card"
+										style="background-color: #F1948A">
+										<div class="card-body">
+											<h5 class="card-title">CD Store</h5>
+											<!-- Border spinner -->
+											<div class="spinner-border" role="status"
+												id='cdStoreValueLoadingSpinner'>
+												<span class="visually-hidden">Loading...</span>
+											</div>
+											<!-- End Border spinner -->
+											<h6>
+												<!-- <i class="bi bi-currency-rupee"></i> -->
+												<span id="cdStoreCardValue"></span>
+											</h6>
+										</div>
+									</div>
+								</div>
+								<!-- End CD_STORE -->
+								<!-- Start PRODUCT_STORE -->
+								<div class="col-xl-2 col-md-2" id="productStoreCard">
+									<div class="card info-card sales-card"
+										style="background-color: #BB8FCE">
+										<div class="card-body">
+											<h5 class="card-title">Product Store</h5>
+											<div class="spinner-border" role="status"
+												id='productStoreValueLoadingSpinner'>
+												<span class="visually-hidden">Loading...</span>
+											</div>
+											<!-- End Border spinner -->
+											<h6 id="productStoreCardValue"></h6>
+										</div>
+									</div>
+								</div>
+								<!-- End PUR_STORE -->
+								<!-- Start CD_STORE -->
+								<div class="col-xl-2 col-md-2" id="purStoreCard">
+									<div class="card info-card sales-card"
+										style="background-color: #85C1E9">
+										<div class="card-body">
+											<h5 class="card-title">Purchase Store</h5>
+											<div class="spinner-border" role="status"
+												id='purchaseStoreValueLoadingSpinner'>
+												<span class="visually-hidden">Loading...</span>
+											</div>
+											<!-- End Border spinner -->
+											<h6 id="purStoreCardValue"></h6>
+										</div>
+									</div>
+								</div>
+								<!-- End PUR_STORE -->
+								<!-- Start SMD_STORE -->
+								<div class="col-xl-2 col-md-2" id="smdStoreCard">
+									<div class="card info-card sales-card"
+										style="background-color: #73C6B6">
+										<div class="card-body">
+											<h5 class="card-title">SMD Store</h5>
+											<div class="spinner-border" role="status"
+												id='smdStoreValueLoadingSpinner'>
+												<span class="visually-hidden">Loading...</span>
+											</div>
+											<!-- End Border spinner -->
+											<h6 id="smdStoreCardValue"></h6>
+										</div>
+									</div>
+								</div>
+								<!-- End SMD_STORE -->
+								<!-- Start SNR_STORE -->
+								<div class="col-xl-2 col-md-2" id="snrStoreCard">
+									<div class="card info-card sales-card"
+										style="background-color: #F8C471">
+										<div class="card-body">
+											<h5 class="card-title">SNR Store</h5>
+											<div class="spinner-border" role="status"
+												id='snrStoreValueLoadingSpinner'>
+												<span class="visually-hidden">Loading...</span>
+											</div>
+											<!-- End Border spinner -->
+											<h6 id="snrStoreCardValue"></h6>
+										</div>
+									</div>
+								</div>
+								<!-- End SNR_STORE -->
+								<div class="col-xl-1 col-md-1"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-lg-12">
+					<div class="card">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-xl-12 col-md-12">
+									<div class="row mb-12">
+										<div class="col-xl-1 col-md-1"></div>
+										<div class="col-xl-3 col-md-3"
+											id="storesAndPurchaseReOrderLevelCard">
+											<div class="card info-card sales-card"
+												style="background-color: #ff99ff">
+												<div class="card-body">
+													<h5 class="card-title">Re-Order Level</h5>
+													<h6>
+														<span id="storesAndPurchaseReOrderLevelValue">0</span>
+													</h6>
+												</div>
+											</div>
+										</div>
+										<div class="col-xl-3 col-md-3"
+											id="storesAndPurchaseOverSufficientLevelCard">
+											<div class="card info-card sales-card"
+												style="background-color: #66ff66">
+												<div class="card-body">
+													<h5 class="card-title">Over Sufficient Level</h5>
+													<h6>
+														<span id="storesAndPurchaseOverSufficientLevelValue">0</span>
+													</h6>
+												</div>
+											</div>
+										</div>
+										<div class="col-xl-3 col-md-3"
+											id="storesAndPurchaseSufficientLevelCard">
+											<div class="card info-card sales-card"
+												style="background-color: #ff6600">
+												<div class="card-body">
+													<h5 class="card-title">Sufficient Level</h5>
+													<h6>
+														<span id="storesAndPurchaseSufficientLevelValue">0</span>
+													</h6>
+												</div>
+											</div>
+										</div>
+										<div class="col-xl-1 col-md-1"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-lg-6">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Stocks in Stores</h5>
+							<!-- Pie Chart -->
+							<div id="stockInStoresDiv"></div>
+							<!-- End Pie Chart -->
+						</div>
+					</div>
+				</div>
+
+				<!-- Stock Levels -->
+				<!-- <div class="col-lg-6">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Stock Levels</h5>
+							Donut Chart
+							<div id="stockLevelsDiv"></div>
+							End Donut Chart
+						</div>
+					</div>
+				</div> -->
+				
+				<!-- No.of. PO Issued and Count -->
+				<div class="col-lg-6">
+					<div class="card">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-xl-12 col-md-12">
+									<h5 class="card-title">No. of PO Issued and Count</h5>
+									<!-- Area Chart -->
+									<div class="row mb-3">
+										<label for="fromDatePOIssuedCount" class="col-sm-2 col-form-label">From Date</label>
+										<div class="col-sm-3">
+											<input type="date" class="form-control" id="fromDatePOIssuedCount">
+										</div>
+										<label for="toDatePOIssuedCount" class="col-sm-2 col-form-label">To Date</label>
+										<div class="col-sm-3">
+											<input type="date" class="form-control" id="toDatePOIssuedCount">
+										</div>
+										<div class="col-sm-2">
+											<button type="button" class="btn btn-success" id="poIssuedCountRefresh">
+												<i class="bi bi-arrow-repeat"></i>
+											</button>
+										</div>
+									</div>
+									<div id="poIssuedAndCountDiv"></div>
+									<!-- End Area CHart -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Top 10 Issued Product ID and Count -->
+				<div class="col-lg-6">
+					<div class="card">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-xl-12 col-md-12">
+									<h5 class="card-title">Top 10 Issued Product ID and Count</h5>
+									<!-- Line Chart -->
+									<div class="row mb-3">
+										<label for="fromDateTopIssuedProductCount" class="col-sm-2 col-form-label">From Date</label>
+										<div class="col-sm-3">
+											<input type="date" class="form-control" id="fromDateTopIssuedProductCount">
+										</div>
+										<label for="toDateTopIssuedProductCount" class="col-sm-2 col-form-label">To Date</label>
+										<div class="col-sm-3">
+											<input type="date" class="form-control" id="toDateTopIssuedProductCount">
+										</div>
+										<div class="col-sm-2">
+											<button type="button" class="btn btn-success" id="topIssuedProductCountRefresh">
+												<i class="bi bi-arrow-repeat"></i>
+											</button>
+										</div>
+									</div>
+									<div id="storesAndPurchaseTopIssuedProductIdAndCountDiv"></div>
+									<!-- Line Chart (End)-->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Low 10 Issued Product ID and Count -->
+				<div class="col-lg-6">
+					<div class="card">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-xl-12 col-md-12">
+									<h5 class="card-title">Low 10 Issued Product ID and Count</h5>
+									<!-- Line Chart -->
+									<div class="row mb-3">
+										<label for="fromDateLowIssuedProductCount" class="col-sm-2 col-form-label">From Date</label>
+										<div class="col-sm-3">
+											<input type="date" class="form-control" id="fromDateLowIssuedProductCount">
+										</div>
+										<label for="toDateLowIssuedProductCount"
+											class="col-sm-2 col-form-label">To Date</label>
+										<div class="col-sm-3">
+											<input type="date" class="form-control" id="toDateLowIssuedProductCount">
+										</div>
+										<div class="col-sm-2">
+											<button type="button" class="btn btn-success" id="lowIssuedProductCountRefresh">
+												<i class="bi bi-arrow-repeat"></i>
+											</button>
+										</div>
+									</div>
+									<div id="storesAndPurchaseLowIssuedProductIdAndCountDiv"></div>
+									<!-- Line Chart (End)-->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				<!-- No.of Indent details -->
+				<div class="col-lg-6">
+					<div class="card">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-xl-12 col-md-12">
+									<h5 class="card-title"> No. of Indent details</h5>
+									<!-- Bar Chart (Start)-->
+									<div class="row mb-3">
+										<label for="fromDateIndentDetails" class="col-sm-2 col-form-label">From Date</label>
+										<div class="col-sm-3">
+											<input type="date" class="form-control" id="fromDateIndentDetails">
+										</div>
+										<label for="toDateIndentDetails" class="col-sm-2 col-form-label">To Date</label>
+										<div class="col-sm-3">
+											<input type="date" class="form-control" id="toDateIndentDetails">
+										</div>
+										<div class="col-sm-2">
+											<button type="button" class="btn btn-success" id="indentDetailsRefresh">
+												<i class="bi bi-arrow-repeat"></i>
+											</button>
+										</div>
+									</div>
+									<div id="indentDetailsDiv"></div>
+									<!-- Bar Chart (End)-->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+				
+				<!-- No.of.Issuance -->
+				<div class="col-lg-6">
+					<div class="card">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-xl-12 col-md-12">
+									<h5 class="card-title">No. of Issuance</h5>
+									<!-- Area Chart -->
+									<div class="row mb-3">
+										<label for="fromDateIssuance" class="col-sm-2 col-form-label">From Date</label>
+										<div class="col-sm-3">
+											<input type="date" class="form-control" id="fromDateIssuance">
+										</div>
+										<label for="toDateIssuance" class="col-sm-2 col-form-label">To Date</label>
+										<div class="col-sm-3">
+											<input type="date" class="form-control" id="toDateIssuance">
+										</div>
+										<div class="col-sm-2">
+											<button type="button" class="btn btn-success" id="issuanceRefresh">
+												<i class="bi bi-arrow-repeat"></i>
+											</button>
+										</div>
+									</div>
+									<div id="issuanceDiv"></div>
+									<!-- End Area CHart -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Product Comparison -->
+				<div class="col-lg-6">
+					<div class="card">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-xl-12 col-md-12">
+									<h5 class="card-title">Product Comparison</h5>
+									<!-- Line Chart -->
+									<div class="row mb-3">
+										<label for="fromDateProductComparison" class="col-sm-2 col-form-label">From Date</label>
+										<div class="col-sm-3">
+											<input type="date" class="form-control" id="fromDateProductComparison">
+										</div>
+										<label for="toDateProductComparison" class="col-sm-2 col-form-label">To Date</label>
+										<div class="col-sm-3">
+											<input type="date" class="form-control" id="toDateProductComparison">
+										</div>
+										<div class="col-sm-2">
+											<button type="button" class="btn btn-success" id="productComparisonRefresh">
+												<i class="bi bi-arrow-repeat"></i>
+											</button>
+										</div>
+									</div>
+									<div id="productComparisonDiv"></div>
+									<!-- End Line CHart -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+
+			</div></section>
+	</div>
+	<!-- End -->
+</div>

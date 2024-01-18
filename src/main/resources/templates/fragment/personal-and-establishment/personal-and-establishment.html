@@ -1,0 +1,67 @@
+<div th:fragment="EmployeeDetails">
+	<div id="personalAndEstablishmentMain">
+		<div class="card" id="employeeRollCardDetails">
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="card positonAlignment info-card" id="employeePresentCount">
+						<div class="card-body">
+							<h5>Employee Present</h5>
+							<h6 id="employeePresentValue">0</h6>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4">
+					<div class="card positonAlignment info-card"  id="payRoll">
+						<div class="card-body">
+							<h5>Pay Roll</h5>
+							<h6 id="payRollCount">0</h6>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4">
+					<div class="card positonAlignment info-card" id="supplementary">
+						<div class="card-body">
+							<h5>Supplementary PayRoll</h5>
+							<h6 id="supplementaryCount">0</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="card positonAlignment info-card" id="tapal">
+						<div class="card-body">
+							<h5>No.Of Tapal Entries</h5>
+							<h6 id="tapalEntriesValue">0</h6>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4">
+					<div class="card positonAlignment info-card" id="entries">
+						<div class="card-body">
+							<h5>No.Of IR Entries</h5>
+							<h6 id="irValue"></h6>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4">
+					<div class="card positonAlignment info-card" id="leave">
+						<div class="card-body">
+							<h5>No.Of Employees Leave</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div th:replace="fragment/personal-and-establishment/employee-roll-card.html::EmployeeRollCardDetails"></div>
+		<div th:replace="fragment/personal-and-establishment/payroll-details.html::PayRollDetails"></div>
+		<div th:replace="fragment/personal-and-establishment/supplementary-payroll.html::SupplementaryPayRollDetails"></div>
+		<div th:replace="fragment/personal-and-establishment/ir-entries.html::IrDetails"></div>
+		<div th:replace="fragment/personal-and-establishment/tapal-entries.html::TapalEntriesDetails"></div>
+	</div>
+</div>
