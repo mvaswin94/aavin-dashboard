@@ -1,0 +1,59 @@
+<div th:fragment="EmployeeRollCardDetails">
+	<section id="employeeAttendenceDetails">
+		<div class="row">
+			<div class="card">
+				<div class="card-body">
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="card positonAlignment info-card " id="dayCount">
+								<div class="card-body">
+									<h5>Today</h5>
+									<h6 id="employeeDailyCount">0</h6>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="card positonAlignment info-card " id="lastTenDayCount">
+								<div class="card-body">
+									<h5>10 Days Count</h5>
+									<h6 id="tenDaysEmployeeCount">0</h6>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="card positonAlignment info-card" id="lastHundredDaysCount">
+								<div class="card-body">
+									<h5>100 Days Count</h5>
+									<h6 id="hundredDaysEmployeeCount">0</h6>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-lg-6">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">Attendence Details</h5>
+						<div id="attendenceChartDiv"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-lg-6">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">Last Seven Day Details</h5>
+						<div id="lastSevenDaysChart"></div>
+					</div>
+				</div>
+			</div>
+			
+			
+
+
+		</div>
+	</section>
+</div>

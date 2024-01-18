@@ -1,0 +1,211 @@
+#employeeRollCardDetails .positonAlignment{
+	    
+        height:130px;
+        width:300px;
+        margin-left: 80px;
+        margin-top: 45px;
+        padding:30px;
+        box-shadow:2px 2px 2px rgb(72,75,76);
+        color:whitesmoke;
+        text-align: center;
+       
+}
+
+#employeeRollCardDetails h5{
+	 font-family:sans-serif;
+}
+#employeeRollCardDetails #employeePresentCount{
+	background-color:rgb(161, 21, 63);
+}
+#employeeRollCardDetails #payRoll{
+	background-color: rgb(52, 165, 165);
+}
+#employeeRollCardDetails #supplementary{
+	background-color:rgb(189, 54, 54);
+}
+#employeeRollCardDetails #tapal{
+	background-color:rgb(79, 148, 114);
+}
+#employeeRollCardDetails #entries{
+	background-color:rgb(34, 98, 134);
+}
+#employeeRollCardDetails #leave{
+	background-color:rgb(18, 76, 87);
+}
+
+
+#employeeRollCardDetails .info-card h6 {
+  font-size: 15px;
+  color:whitesmoke;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+
+
+/*Enployee-Roll-card-Details screen*/
+
+#employeeAttendenceDetails .positonAlignment{
+	    
+        height:130px;
+        width:300px;
+        margin-left: 80px;
+        margin-top: 45px;
+        padding:30px;
+        box-shadow:2px 2px 2px rgb(72,75,76);
+        text-align: center;
+       
+}
+#employeeAttendenceDetails .info-card h6 {
+  font-size: 15px;
+  color:black;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+
+
+#employeeAttendenceDetails h5{
+	 font-family:sans-serif;
+}
+#employeeAttendenceDetails #dayCount{
+	background-color:rgb(255, 128, 128);
+	
+}
+#employeeAttendenceDetails #lastTenDayCount{
+	background-color:rgb(128, 128, 255)
+}
+#employeeAttendenceDetails #lastHundredDaysCount{
+	background-color:rgb(0, 224, 138 );
+}
+
+
+/*PayRoll Details*/
+
+#payRollDetails .positonAlignment{
+	height:130px;
+    width:350px;
+    margin-left: 45px;
+    margin-top: 45px;
+    padding:30px;
+    box-shadow:2px 2px 2px rgb(72,75,76);
+    text-align: center;
+}
+
+
+ 
+ #payRollDetails #currentMonthPayRoll{
+	 background-color: rgb(105, 173, 158);
+	 color:whitesmoke;
+	}
+	
+#payRollDetails #lastMonthPayRoll{
+	 background-color: rgb(117, 181, 98);
+	 color:whitesmoke;
+	}
+	
+	#payRollDetails #SecondMonthPayRoll{
+	 background-color:rgb(208, 91, 70);
+	 color:whitesmoke;
+	}
+	
+	#payRollDetails h6{
+		color:whitesmoke;
+		font-size: 20px;
+	}
+	
+	
+#supplementaryDetails .positonAlignment{
+	height:130px;
+    width:350px;
+    margin-left: 45px;
+    margin-top: 45px;
+    padding:30px;
+    box-shadow:2px 2px 2px rgb(72,75,76);
+    text-align: center;
+}
+
+#supplementaryDetails h6{
+		color:whitesmoke;
+		font-size: 20px;
+	}
+	
+#supplementaryDetails #supplementaryCurrentMontCard{
+	
+	background-color:#800080;
+	 color:whitesmoke;
+	}
+	
+#supplementaryDetails #supplementaryFirstMontCard{
+	background-color:#FF6347;
+	 color:whitesmoke;
+	}
+	
+#supplementaryDetails #supplementarySecondMontCard{
+	background-color:#6A5ACD;
+	 color:whitesmoke;
+	}
+	
+
+#IrEntries .positonAlignment{
+	height:130px;
+    width:350px;
+    margin-left: 45px;
+    margin-top: 45px;
+    padding:30px;
+    box-shadow:2px 2px 2px rgb(72,75,76);
+    text-align: center;
+}
+
+#IrEntries h6{
+		color:whitesmoke;
+		font-size: 20px;
+	}
+	
+#IrEntries #todayIrDetails{
+	
+	background-color:#FF4500;
+	 color:whitesmoke;
+	}
+	
+#IrEntries #tenDaysIrDetails{
+	background-color:#191970;
+	 color:whitesmoke;
+	}
+	
+#IrEntries #hundredDaysIrDetails{
+	background-color:#800000;
+	 color:whitesmoke;
+	}
+	
+#tapalEntries .positonAlignment{
+	height:130px;
+    width:350px;
+    margin-left: 45px;
+    margin-top: 45px;
+    padding:30px;
+    box-shadow:2px 2px 2px rgb(72,75,76);
+    text-align: center;
+}
+
+#tapalEntries h6{
+		color:whitesmoke;
+		font-size: 20px;
+	}
+	
+#tapalEntries #todayTapalCard{
+	background:#085167; 
+	color:whitesmoke;
+	}
+	
+#tapalEntries #tenDaysTapalCard{
+	background-color:#D9034C;
+	 color:whitesmoke;
+	}
+	
+#tapalEntries #hundredDaysTapalCard{
+	background-color:#07027C;
+	 color:whitesmoke;
+	}
+	
+	
